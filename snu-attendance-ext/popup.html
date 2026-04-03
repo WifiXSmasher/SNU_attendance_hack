@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SNU Attendance Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="logo-row">
+        <div class="logo-icon">▲</div>
+        <div>
+          <div class="title">ATTENDANCE ANALYZER</div>
+          <div class="subtitle">SNU · SARS System</div>
+        </div>
+      </div>
+      <div class="threshold-control">
+        <span class="threshold-label">Target</span>
+        <button class="thresh-btn" id="threshDown">−</button>
+        <span class="threshold-val" id="threshVal">75%</span>
+        <button class="thresh-btn" id="threshUp">+</button>
+      </div>
+    </header>
+
+    <div id="status-bar" class="status-bar">
+      <div class="status-dot"></div>
+      <span id="status-text">Open your attendance summary page first</span>
+    </div>
+
+    <div id="main-content">
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Crunching numbers...</p>
+      </div>
+
+      <div id="error-view" class="hidden">
+        <div class="error-icon">!</div>
+        <p id="error-msg">Could not read attendance data.</p>
+        <a href="https://markattendance.webapps.snu.edu.in/application/index/summary" target="_blank" class="btn-open">Open Attendance Page →</a>
+      </div>
+
+      <div id="courses-view" class="hidden">
+        <div id="courses-list"></div>
+      </div>
+
+      <div id="idle-view">
+        <div class="idle-graphic">📋</div>
+        <p class="idle-text">Navigate to your SNU attendance summary, then click below.</p>
+        <a href="https://markattendance.webapps.snu.edu.in/application/index/summary" target="_blank" class="btn-open">Open Attendance Page →</a>
+        <button id="btn-scan" class="btn-scan">Scan This Page</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
