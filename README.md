@@ -1,4 +1,5 @@
-# SNU_attendance_hack
+# SNU_attendance_assistant
+
 > 1. just download the zip file
 > 2. extract it
 > 3. go to your browser -> chrome://extensions or brave://extensions (according to your browser)
